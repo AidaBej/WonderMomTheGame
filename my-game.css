@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin: 0 auto;
+}
+
+html {
+  font-size: 16px;
+}
+
+.container-hp {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  background-image: url(./images/WM-Background2.jpg);
+  background-size: cover;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.homepage-title {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homepage-title h1 {
+  margin: 0;
+  font-size: 90px;
+}
+
+.homepage-title h2 {
+  margin: 0;
+  align-self: flex-end;
+  font-size: 3rem;
+}
+
+.rules {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 20px 0;
+  max-width: 700px;
+  max-height: 179px;
+  border-color: rgb(215, 172, 42);
+  border-style: solid;
+  background-color: rgba(255, 255, 255, 0.384);
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+.rules h3 {
+  color: rgb(105, 34, 40);
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.rules .howtoplay {
+  text-align: center;
+  margin: 0;
+}
+
+.rules .btn {
+  position: relative;
+  top: 26px;
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.btn {
+  font-size: 20px;
+  width: 670px;
+  padding: 14px 40px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  border: 5px;
+  line-height: 1.5;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  color: rgb(105, 34, 40);
+  background-color: rgb(215, 172, 42);
+}
+
+/* GAME PAGE */
+
+#header {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-top: 20px;
+}
+
+#header {
+  padding-top: 40px;
+}
+
+#header h1 {
+  font-size: 5rem;
+  margin: 0;
+}
+
+#header h2 {
+  font-size: 3rem;
+  margin: 0;
+  align-self: flex-end;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  position: relative;
+  max-width: 700px;
+  max-height: 500px;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  border-color: black;
+  border-style: double;
+  background-color: black;
+}
+
+.container span {
+  min-height: 50px;
+}
+
+.nappy {
+  width: 100%;
+  background-image: url(./images/nappy.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.coffee {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(./images/coffee-mug-hot.gif);
+  margin: 0;
+  padding: 0;
+}
+
+#mom {
+  /* background: black; */
+  width: 100%;
+  z-index: 1;
+  background-image: url(./images/supermom1.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bar {
+  height: 7px;
+  max-width: 500px;
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  background: black;
+  border: 2px solid black;
+}
+
+.bar .progress {
+  height: 100%;
+  width: 100%;
+  color: white;
+  position: absolute;
+  height: 7px;
+  transition: background 3s ease-in;
+}
+
+.bar .progress.ok {
+  background: green;
+}
+
+.bar .progress.warning {
+  background: orange;
+}
+
+.bar .progress.danger {
+  background: red;
+}
+
+.popup {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in;
+}
+
+.popup.is-active {
+  z-index: 2;
+  opacity: 1;
+}
+
+#btn-restart {
+  font-size: 1rem;
+  width: 150px;
+  height: 50px;
+  padding: 14px 40px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  /* align-items: flex-end; */
+  position: relative;
+  /* flex-direction: row; */
+  border: 5px;
+  /* line-height: 2.5; */
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  margin: 10px;
+  align-items: flex-start;
+}
+
+#btn-restart:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  color: rgb(105, 34, 40);
+  background-color: rgb(215, 172, 42);
+}
+
+#endGame {
+  background-image: url(./images/WM-fly.gif);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  width: 700px;
+  margin-top: 238px;
+  padding-top: 30px;
+}
+
+h3 {
+  font-size: 2rem;
+  color: rgb(105, 34, 40);
+}
+
+#audio {
+  display: none;
+}

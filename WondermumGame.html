@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <script type="module" src="./my-game.js"></script>
+    <link rel="stylesheet" href="my-game.css" />
+
+    <title>WonderMom Game</title>
+  </head>
+
+  <body>
+    <audio
+      id="audio"
+      autoplay="true"
+      src="./audio/wonder-woman-theme.mp3"
+    ></audio>
+    <div id="popup" class="popup">
+      <span id="minDec" class="number"></span>
+      <span id="minUni" class="number"></span>
+      <span id=":"></span>
+      <span id="secDec" class="number"></span>
+      <span id="secUni" class="number"></span>
+    </div>
+
+    <div id="header" class="header">
+      <h1>WonderMom</h1>
+      <h2>The Game</h2>
+    </div>
+
+    <div class="bar">
+      <div class="progress ok"></div>
+    </div>
+
+    <div id="grid" class="game container">
+      <span id="mom"></span>
+    </div>
+  </body>
+</html>
